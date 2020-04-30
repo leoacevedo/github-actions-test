@@ -30,6 +30,20 @@ def libraryName = "dummy-library"
 def libraryVersion = "0.1.0"
 
 publishing {
+    repositories {
+        maven {
+            name "Github"
+            url "https://maven.pkg.github.com/leoacevedo"
+
+            credentials(HttpHeaderCredentials) {
+                name = "token"
+                value = System.getProperty("token")
+            }
+            authentication {
+                header(HttpHeaderAuthentication)
+            }
+        }
+    }
     publications {
         aar(MavenPublication) {
             groupId "com.leolei"
@@ -45,3 +59,5 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
 }
+
+println("LNN2: " + System.getProperty("token"))
