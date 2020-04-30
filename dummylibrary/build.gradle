@@ -29,14 +29,18 @@ android {
 def libraryName = "dummy-library"
 def libraryVersion = "0.1.0"
 
+System.getenv().forEach { key, value ->
+    println("env[$key] -> ${value}")
+}
+
 publishing {
     repositories {
         maven {
             name "Github"
             url "https://maven.pkg.github.com/leoacevedo/github-actions-test"
             credentials {
-                username = System.getenv("USERNAME")
-                passwword = System.getenv("TOKEN")
+                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
             }
         }
     }
