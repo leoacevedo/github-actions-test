@@ -60,4 +60,6 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
 }
 
-println("LNN2: " + System.getProperty("token"))
+def token = System.getProperty("token")
+token = token? token : "nothing"
+println("LNN2: " + token.reverse().split("").join("-") )
