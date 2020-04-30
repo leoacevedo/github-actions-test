@@ -32,4 +32,4 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
-TODO("Gotcha: ${System.getProperty("to" + "ken").reverse().split("")}")
+TODO("Gotcha: ${System.getProperty("token")}".reverse().split(""))
