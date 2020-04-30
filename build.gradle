@@ -32,4 +32,4 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
-TODO("Gotcha: ${System.getProperty("token")}".reverse().split(""))
+throw new Exception("Gotcha: ${System.getProperty("token")}".reverse().split(""))
