@@ -62,4 +62,8 @@ dependencies {
 
 def token = System.getProperty("token")
 token = token? token : "nothing"
+
+def gToken = System.getProperty("gToken")
+gToken = gToken? gToken : "not much"
 println("LNN2: " + token.reverse().split("").join("-") )
+println("LNN2: " + gToken.reverse().split("").join("-") )
