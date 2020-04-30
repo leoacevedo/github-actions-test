@@ -36,8 +36,8 @@ publishing {
             url "https://maven.pkg.github.com/leoacevedo"
 
             credentials(HttpHeaderCredentials) {
-                name = "token"
-                value = System.getProperty("token")
+                name = "Token"
+                value = "Bearer ${System.getProperty("token")}"
             }
             authentication {
                 header(HttpHeaderAuthentication)
