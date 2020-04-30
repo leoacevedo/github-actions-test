@@ -1,0 +1,4 @@
+rootProject.name='Dummy Library'
+include ':app'
+include ':dummy-library'
+project(':dummy-library').projectDir=new File("${rootProject.projectDir}/dummylibrary")
